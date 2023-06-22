@@ -5,20 +5,21 @@
 }
 
 :root {
-    --main-fz: 16px;
+    --main-fz: 15px;
+    --paragraph-fz: 13.5px;
     --fnt-color: #1d1c1c;
     --secondary-fnt-color: #fff;
     --primary-bg-color: rgb(233, 166, 47);
     --fnt-weight: 600;
-    --fx-gap: 16px;
+    --fx-gap: 7px;
     --padding: 15px;
-    --general-padding: 20px;
+    --general-padding: 10px;
     --dd-background: rgb(247, 247, 247);
 }
 
 @font-face {
     font-family: normal;
-    src: url(../font/Raleway/static/Raleway-Regular.ttf);
+    src: url(../font/Noto_Sans/NotoSans-Regular.ttf);
 }
 
 .container {
@@ -27,6 +28,7 @@
 }
 
 .container-child {
+    font-family: normal;
     max-width: 1400px;
     margin: auto;
     padding: var(--general-padding);
@@ -59,11 +61,12 @@ header {
     object-fit: contain;
 }
 
-.menu{
+.menu {
+    z-index: 1000;
     width: 100%;
     position: absolute;
     left: 0;
-    top: 5em;
+    top: 4.3em;
     background: var(--dd-background);
 }
 
@@ -72,9 +75,9 @@ ul {
     align-items: center;
     flex-direction: column;
     list-style: none;
-} 
- 
-li{
+}
+
+li {
     width: 100%;
     display: none;
     text-align: center;
@@ -94,13 +97,107 @@ li a {
 .diff-color {
     background: var(--primary-bg-color);
     color: var(--secondary-fnt-color);
-} */
+} 
 
 li a:hover {
     background: var(--primary-bg-color);
     color: var(--secondary-fnt-color);
-} 
+}
+*/
 
-.navigation:hover *{
+.navigation:hover * {
     display: block;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--fx-gap);
+}
+
+.first-section .first-child {
+    display: flex;
+    flex-direction: column;
+    gap: var(--fx-gap);
+}
+
+.first-child p {
+    font-size: var(--paragraph-fz);
+}
+
+.first-child p:nth-child(1) {
+    color: var(--primary-bg-color);
+}
+
+button {
+    border: none;
+    padding: var(--padding);
+    background: var(--secondary-fnt-color);
+}
+
+button:nth-child(1) {
+    background: var(--primary-bg-color);
+    color: var(--secondary-fnt-color);
+}
+
+.second-child {
+    display: flex;
+    position: relative;
+}
+
+
+.background {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50vh;
+    background: url(../image/fashion1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.blur {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    width: 60%;
+    height: 50vh;
+    transform: translateX(67%);
+    display: flex;
+    padding: var(--padding);
+    align-items: center;
+}
+
+.text {
+    font-size: 31px;
+    width: 40%;
+}
+
+.multicolortext {
+    background-image: linear-gradient(to left, var(--fnt-color) 0%, var(--primary-bg-color) 0%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.multicolortext:nth-child(1){
+    background-image: linear-gradient(to left, var(--fnt-color) 46%, var(--primary-bg-color) 10%);
+}
+
+.multicolortext:nth-child(2) {
+    background-image: linear-gradient(to left, var(--fnt-color) 47%, var(--primary-bg-color) 10%);
+}
+
+.multicolortext:nth-child(3) {
+    background-image: linear-gradient(to left, var(--fnt-color) 38%, var(--primary-bg-color) 10%);
+}
+
+.multicolortext:nth-child(4) {
+    background-image: linear-gradient(to left, var(--fnt-color) 32%, var(--primary-bg-color) 10%);
+}
+
+.multicolortext:nth-child(5) {
+    background-image: linear-gradient(to left, var(--fnt-color) 48%, var(--primary-bg-color) 10%);
+}
+
+.multicolortext:nth-child(6) {
+    background-image: linear-gradient(to left, var(--fnt-color) 23%, var(--primary-bg-color) 10%);
 }
